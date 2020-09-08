@@ -60,6 +60,12 @@
       let tagH1 = document.createElement('h1');
       tagH1.innerText = 'Exercício 5.2 - JavaScript DOM';
       document.body.appendChild(tagH1);
+      let tagDiv = document.createElement('div');
+      tagDiv.className = 'main-content';
+      document.body.appendChild(tagDiv);
+      let tagDiv2 = document.createElement('div');
+      tagDiv2.className = 'center-content';
+      document.querySelector('.main-content').appendChild(tagDiv2);
     </script>
   </body>
 </html>
