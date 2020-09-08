@@ -78,7 +78,14 @@
       image.src = 'https://picsum.photos/200';
       image.className = 'small-image';
       document.querySelector('.left-content').appendChild(image);
-
+      let listaUL = document.createElement('ul')
+      let inteirosExtenso = ['um', 'dois', 'tres', 'quatro', 'cinco', 'seis', 'sete', 'oito', 'nove', 'dez'];
+      for (let i = 0; i < inteirosExtenso.length; i++) {
+        let linha = document.createElement('li');
+        linha.innerText = inteirosExtenso[i];
+        listaUL.appendChild(linha);
+      }
+      document.querySelector('.right-content').appendChild(listaUL);
     </script>
   </body>
 </html>
