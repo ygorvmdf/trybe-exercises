@@ -38,7 +38,14 @@
         function buttonClicked() {
             window.alert('Você clicou no botão');
         }
+        const productPrice = 59.99;
+        const discount = 0.3;
+        function getDiscount() {
+            let finalPrice = productPrice * discount;
+            window.alert(`Desconto de R$${finalPrice}`);
+        }
       </script>
+      <button onclick="getDiscount()">tarefa 2</button>
       <hr />
       <h2>Bônus</h2>
       <p>
