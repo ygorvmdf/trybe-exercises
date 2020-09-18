@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/bootstrap.min.css">
+    <script src="./path/to/just-validate.min.js"></script>
+    <script src="js/DatePickerX.min.js"></script>
     <title>Document</title>
 </head>
 <body>
@@ -55,12 +57,15 @@
             </div>
             <div>
                 <label for="data-inicio">Data de início</label>
-                <input type="text" name="data-inicio" id="data-inicio" pattern="([12][0-9]|0?[1-9]|3[01])/(0?[1-9]|1[012])/\d{4}" required>
+                <input type="text" name="data-inicio" id="data-inicio" required>
             </div>
         </fieldset>
         <button id="submit-button" type="submit">Enviar</button>
     </form>
     <button id="clean-fields">Limpar campos</button>
     <script src="script.js"></script>
+    <script>
+        const startDate = document.getElementById('data-inicio').DatePickerX.init();
+    </script>
 </body>
 </html>
