@@ -37,9 +37,18 @@ for (let city in citiesList) {
 }
 
 function interruptForm(event) {
-  event.preventDefault();
   const div = document.createElement('div');
-  
+  const inputList = document.getElementsByTagName('input');
+  const select = document.getElementById('estado');
+  const textarea = document.getElementById('curriculo');
+  console.log(inputList);
+  for (let i = 0; i < inputList.length; i += 1) {
+    div.innerHTML += `${inputList[i].name}: ${inputList[i].value}<br>`
+  }
+  div.innerHTML += `Estado: ${select.value}<br>`;
+  div.innerHTML += `Resumo curriculo: ${textarea.value}`;
+  document.body.appendChild(div);
+  event.preventDefault();
 }
 
 document.getElementById('submit-button').addEventListener('click', interruptForm);
