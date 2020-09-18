@@ -52,3 +52,15 @@ function interruptForm(event) {
 }
 
 document.getElementById('submit-button').addEventListener('click', interruptForm);
+document.getElementById('clean-fields').addEventListener('click', function() {
+  const inputList = document.getElementsByTagName('input');
+  const select = document.getElementById('estado');
+  const textarea = document.getElementById('curriculo');
+  const divArea = document.querySelector('div');
+  for (let i = 0; i < inputList.length; i += 1) {
+    inputList[i].value = '';
+  }
+  select.value = '';
+  textarea.value = '';
+  divArea.innerHTML = '';
+})
