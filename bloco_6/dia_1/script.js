@@ -35,3 +35,11 @@ for (let city in citiesList) {
   cityOption.innerText = city;
   selectCity.appendChild(cityOption);
 }
+
+function interruptForm(event) {
+  event.preventDefault();
+  const div = document.createElement('div');
+  
+}
+
+document.getElementById('submit-button').addEventListener('click', interruptForm);
