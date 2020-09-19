@@ -46,9 +46,9 @@ function checkingRadioInput() {
 function interruptForm(event) {
   event.preventDefault();
   const div = document.createElement('div');
+  div.className = 'form-result'
   const inputList = document.getElementsByClassName('not-radio');
-  console.log(inputList);
-  for (let i = 0; i < 10; i += 1) {
+  for (let i = 0; i < inputList.length; i += 1) {
     div.innerHTML += `${inputList[i].name}: ${inputList[i].value}<br>`;
   }
   document.body.appendChild(div);
@@ -57,16 +57,12 @@ function interruptForm(event) {
 
 document.getElementById('submit-button').addEventListener('click', interruptForm);
 document.getElementById('clean-fields').addEventListener('click', function() {
-  const inputList = document.getElementsByTagName('input');
-  const select = document.getElementById('estado');
-  const textarea = document.getElementById('curriculo');
-  const divArea = document.querySelector('div');
+  const inputList = document.getElementsByClassName('not-radio');
+  const divArea = document.getElementsByClassName('form-result')[0];
   for (let i = 0; i < inputList.length; i += 1) {
     inputList[i].value = '';
   }
-  select.value = '';
-  textarea.value = '';
-  divArea.innerHTML = '';
+  document.body.removeChild(divArea);
 })
 
 document.getElementsByClassName('radio')[0].addEventListener('change', checkingRadioInput);
