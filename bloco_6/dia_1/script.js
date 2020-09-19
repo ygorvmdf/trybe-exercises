@@ -36,20 +36,24 @@ for (let city in citiesList) {
   selectCity.appendChild(cityOption);
 }
 
-function interruptForm(event) {
-  const div = document.createElement('div');
-  const inputList = document.getElementsByTagName('input');
-  const select = document.getElementById('estado');
-  const textarea = document.getElementById('curriculo');
-  console.log(inputList);
-  for (let i = 0; i < inputList.length; i += 1) {
-    div.innerHTML += `${inputList[i].name}: ${inputList[i].value}<br>`
+function checkingRadioInput() {
+  const radioInput = document.getElementsByClassName('radio');
+  for (let i = 0; i < radioInput.length; i += 1) {
+    radioInput[i].classList.toggle('not-radio');
   }
-  div.innerHTML += `Estado: ${select.value}<br>`;
-  div.innerHTML += `Resumo curriculo: ${textarea.value}`;
-  document.body.appendChild(div);
-  event.preventDefault();
 }
+
+function interruptForm(event) {
+  event.preventDefault();
+  const div = document.createElement('div');
+  const inputList = document.getElementsByClassName('not-radio');
+  console.log(inputList);
+  for (let i = 0; i < 10; i += 1) {
+    div.innerHTML += `${inputList[i].name}: ${inputList[i].value}<br>`;
+  }
+  document.body.appendChild(div);
+}
+  
 
 document.getElementById('submit-button').addEventListener('click', interruptForm);
 document.getElementById('clean-fields').addEventListener('click', function() {
@@ -64,3 +68,6 @@ document.getElementById('clean-fields').addEventListener('click', function() {
   textarea.value = '';
   divArea.innerHTML = '';
 })
+
+document.getElementsByClassName('radio')[0].addEventListener('change', checkingRadioInput);
+document.getElementsByClassName('radio')[1].addEventListener('change', checkingRadioInput);

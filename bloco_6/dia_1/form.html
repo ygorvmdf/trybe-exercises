@@ -3,7 +3,6 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
     <title>Document</title>
 </head>
 <body>
@@ -11,51 +10,51 @@
         <fieldset>
             <div>
                 <label for="nome">Nome</label>
-                <input type="text" name="nome" id="nome" maxlength="40" required>
+                <input class='not-radio' type="text" name="nome" id="nome" maxlength="40" required>
             </div>
             <div>
                 <label for="email">Email</label>
-                <input type="text" name="email" id="email" maxlength="50" required>
+                <input class='not-radio' type="text" name="email" id="email" maxlength="50" required>
             </div>
             <div>
                 <label for="cpf">CPF</label>
-                <input type="text" name="cpf" id="cpf" maxlength="11" required>
+                <input class='not-radio' type="text" name="cpf" id="cpf" maxlength="11" required>
             </div>
             <div>
                 <label for="endereço">Endereço</label>
-                <input type="text" name="endereço" id="endereço" maxlength="200" required>
+                <input class='not-radio' type="text" name="endereço" id="endereço" maxlength="200" required>
             </div>
             <div>
                 <label for="cidade">Cidade</label>
-                <input type="text" name="cidade" id="cidade" maxlength="28" required>
+                <input class='not-radio' type="text" name="cidade" id="cidade" maxlength="28" required>
             </div>
             <div>
                 <label for="estado">Estado</label>
-                <select name="estado" id="estado"></select>
+                <select class='not-radio' name="estado" id="estado"></select>
             </div>
             <div>
-                <label for="tipo">Apartamento</label>
-                <input type="radio" name="tipo" id="tipo-apartamento" value="apartamento" required>
-                <label for="tipo">Casa</label>
-                <input type="radio" name="tipo" id="tipo-casa" value="casa" required>
+                <label for="tipo-apartamento">Apartamento</label>
+                <input class="radio not-radio" type="radio" name="tipo" id="tipo-apartamento" value="apartamento" checked required>
+                <label for="tipo-casa">Casa</label>
+                <input class="radio" type="radio" name="tipo" id="tipo-casa" value="casa" required>
             </div>
         </fieldset>
         <fieldset>
             <div>
                 <label for="curriculo">Resumo do currículo</label>
-                <textarea name="curriculo" id="curriculo" cols="30" rows="10" maxlength="1000" required></textarea>
+                <textarea class='not-radio' name="curriculo" id="curriculo" cols="30" rows="10" maxlength="1000" required></textarea>
             </div>
             <div>
                 <label for="cargo">Cargo</label>
-                <input type="text" name="cargo" id="cargo" maxlength="40" required>
+                <input class='not-radio' type="text" name="cargo" id="cargo" maxlength="40" required>
             </div>
             <div>
                 <label for="descricao-cargo">Descrição do cargo</label>
-                <input type="text" name="descricao-cargo" id="descricaocargo" maxlength="500" required>
+                <input class='not-radio' type="text" name="descricao-cargo" id="descricaocargo" maxlength="500" required>
             </div>
             <div>
                 <label for="data-inicio">Data de início</label>
-                <input type="text" name="data-inicio" id="data-inicio" pattern="([12][0-9]|0?[1-9]|3[01])/(0?[1-9]|1[012])/\d{4}" required>
+                <input class='not-radio' type="text" name="data-inicio" id="data-inicio" pattern="([12][0-9]|0?[1-9]|3[01])/(0?[1-9]|1[012])/\d{4}" required>
             </div>
         </fieldset>
         <button id="submit-button" type="submit">Enviar</button>
