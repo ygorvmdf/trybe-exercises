@@ -1,9 +1,7 @@
 #pond {
-    display: flex;
-    align-items: flex-start;
-  }
-  
-  .yellow {
-  order: 1;
-  align-self: flex-end;
-  }
+  display: flex;
+}
+
+.yellow {
+order: 3;
+}

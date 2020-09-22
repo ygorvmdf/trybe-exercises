@@ -1,5 +1,8 @@
 #pond {
-    display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-  }
+  display: flex;
+  align-items: flex-start;
+}
+
+.yellow {
+align-self: flex-end;
+}
