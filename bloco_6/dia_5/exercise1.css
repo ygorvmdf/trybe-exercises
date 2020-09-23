@@ -28,4 +28,17 @@ figure {
     h1 {
         font-size: 2em;
       }
+
+    figure {
+      margin: 0;
+      margin: 35px 0;
+      width: 330px;
+      margin-right: 20px;
+    }
+
+    .cats-images {
+      display: flex;
+      flex-wrap: wrap;
+      font-size: 0.6em;
+    }
 }
