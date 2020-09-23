@@ -18,7 +18,7 @@ figure {
     margin: 35px 0;
 }
 
-@media screen and (min-width: 800px) and (max-width: 1299px) {
+@media screen and (min-width: 800px){
     body {
       background-color: blue;
       font-size: 2.5em;
@@ -46,6 +46,9 @@ figure {
 @media screen and (min-width: 1300px) {
     body {
         background-color: red;
-        font-size: 2em
+        font-size: 2em;
+        margin: 50px;
+        max-width: 80%;
+        text-align: center;
     }
 }
