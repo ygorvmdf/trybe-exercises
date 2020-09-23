@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset=utf-8 />
+<title>Calculator</title>
+</head>
+<body>
+
+  <label>Square this number:
+    <input type="number" id="square-input" size="2">
+  </label>
+  <button id="square-button">Calculate</button>
+  <br><br>
+  
+  <label>Half this number:
+    <input type="number" id="half-input" size="2">
+  </label>
+  <button id="half-button">Calculate</button>
+  <br><br>
+  
+  <label>
+    Fraction:
+    <input type="number" id="percent1-input" size="2">
+  </label>
+  <label>
+    Whole:
+    <input type="number" id="percent2-input" size="2">
+  </label>
+  <button id="percent-button">Calculate</button>
+  <br><br>
+  
+  <label>Calculate area of circle with radius:
+    <input type="number" id="area-input" size="2">
+  </label>
+  <button id="area-button">Calculate</button> 
+  <br><br>
+  <div id="solution"></div>
+  <script>
+      function squareNumber() {
+    let squaredNumber = parseInt(document.getElementById('square-input').value) * parseInt(document.getElementById('square-input').value);
+    document.getElementById('solution').innerText = 'The result of squaring the number ' + document.getElementById('square-input').value + ' is ' + squaredNumber
+    return;
+    }
+
+    function halfOf() {
+        let half = parseInt(document.getElementById('half-input').value) / 2;
+        document.getElementById('solution').innerText = 'Half of ' + document.getElementById('half-input').value + ' is ' +  half;
+        return;
+    }
+
+    function percentOf() {
+        let num1 = document.getElementById('percent1-input').value;
+        let num2 = document.getElementById('percent2-input').value;
+        let percent = parseInt(num1)/parseInt(num2) * 100;
+        document.getElementById('solution').innerText = num1 + ' is ' + percent + '% of ' + num2;
+        return;
+    }
+
+    function areaOfCircle() {
+        let area = Math.PI * parseInt(document.getElementById('area-input').value) * parseInt(document.getElementById('area-input').value);
+        document.getElementById('solution').innerText = 'The area of circle with radius ' + document.getElementById('area-input').value  + ' is ' + area;
+        return;
+    }
+    let squareButton = document.getElementById('square-button');
+    squareButton.addEventListener('click', squareNumber);
+    let halfButton = document.getElementById('half-button');
+    halfButton.addEventListener('click', halfOf);
+    let percentButton = document.getElementById('percent-button');
+    percentButton.addEventListener('click', percentOf);
+    let circleButton = document.getElementById('area-button');
+    circleButton.addEventListener('click', areaOfCircle);
+  </script>
+  
+</body>
+</html>
