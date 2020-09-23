@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang=pt-br>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <script src="js/DatePickerX.min.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <form action="" class="w-50 p-3 mx-auto my-form">
+        <fieldset>
+            <div class="form-group">
+                <label for="nome">Nome</label>
+                <input data-validate-field="name" class='form-control not-radio' type="text" name="nome" id="nome" maxlength="40" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input data-validate-field="email" class='form-control not-radio' type="text" name="email" id="email" maxlength="50" required>
+            </div>
+            <div class="form-group">
+                <label for="cpf">CPF</label>
+                <input data-validate-field="text" class='form-control not-radio' type="text" name="cpf" id="cpf" maxlength="11" required>
+            </div>
+            <div class="form-group">
+                <label for="endereço">Endereço</label>
+                <input data-validate-field="text" class='form-control not-radio' type="text" name="endereço" id="endereço" maxlength="200" required>
+            </div>
+            <div class="form-group">
+                <label for="cidade">Cidade</label>
+                <input data-validate-field="text" class='form-control not-radio' type="text" name="cidade" id="cidade" maxlength="28" required>
+            </div>
+            <div class="form-group">
+                <label for="estado">Estado</label>
+                <select class='form-control not-radio' name="estado" id="estado"></select>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input radio not-radio" type="radio" name="tipo" id="tipo-apartamento" value="apartamento" checked required>
+                <label class="form-check-label" for="tipo-apartamento">Apartamento</label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input radio" type="radio" name="tipo" id="tipo-casa" value="casa" required>
+                <label class="form-check-label" for="tipo-casa">Casa</label>
+            </div>
+        </fieldset>
+        <fieldset>
+            <div class="form-group">
+                <label for="curriculo">Resumo do currículo</label>
+                <textarea data-validate-field="text" class='form-control not-radio' name="curriculo" id="curriculo" cols="30" rows="10" maxlength="1000" required></textarea>
+            </div> 
+            <div class="form-group">
+                <label for="cargo">Cargo</label>
+                <input data-validate-field="text" class='form-control not-radio' type="text" name="cargo" id="cargo" maxlength="40" required>
+            </div>
+            <div class="form-group">
+                <label for="descricao-cargo">Descrição do cargo</label>
+                <input data-validate-field="text" class='form-control not-radio' type="text" name="descricao-cargo" id="descricaocargo" maxlength="500" required>
+            </div>
+            <div class="form-group">
+                <label for="data-inicio">Data de início</label>
+                <input data-validate-field="text" class='form-control not-radio' type="text" name="data-inicio" id="data-inicio" required>
+            </div>
+        </fieldset>
+        <div class="btn-group">
+            <button class="btn btn-primary" id="submit-button" type="submit">Enviar</button>
+            <button class="btn btn-secondary" id="clean-fields" type="button">Limpar campos</button>
+        </div>
+    </form>
+    <script src="script.js"></script>
+    <script>
+        document.getElementById('data-inicio').DatePickerX.init();
+    </script>
+    <script src="js/just-validate.min.js"></script>
+</body>
+</html>
