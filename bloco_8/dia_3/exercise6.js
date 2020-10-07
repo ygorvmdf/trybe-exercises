@@ -6,7 +6,13 @@ const notas = [[9, 8, 10, 7, 5], [10, 9, 9, 10, 8], [10, 7, 10, 8, 9]];
 
 
 function studentAverage() {
-  // escreva seu código aqui
+  const finalObject = alunos.map((student, i) => {
+      return {
+          name: student,
+          average: notas[i].reduce((accumulator, current) => accumulator + current) / notas[i].length,
+      };
+  });
+  return finalObject;
 }
 
 const expected = [
