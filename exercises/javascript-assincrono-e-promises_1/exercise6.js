@@ -13,7 +13,6 @@ const handleError = (errorReason) => console.log(`Error getting temperature: ${e
 
 // definição da função sendMarsTemperature...
 const sendMarsTemperature =(onSuccess, onFailure) => {
-    const delay = messageDelay();
     const chance = Math.floor(Math.random() * 100);
     const temperature = getMarsTemperature();
     if (chance <= 60) {
