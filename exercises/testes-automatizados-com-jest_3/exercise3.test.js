@@ -1,5 +1,3 @@
-const { it, expect } = require("@jest/globals");
-
 let randomNumber = () => Math.floor(Math.random * 101);
 
 randomNumber = jest.fn().mockImplementation((a, b, c) => {
