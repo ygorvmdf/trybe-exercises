@@ -1,5 +1,3 @@
-const { it, expect } = require("@jest/globals");
-
 let toUpperCase = str => typeof str === "string" ? str.toUpperCase() : 'Only string accepted.';
 
 let firstLetter = str => typeof str === "string" ? str[0] : 'Only string accepted.';
@@ -82,3 +80,5 @@ describe('testing the third function bafore and after changing the implementatio
         expect(concatString(5)).toBe('Only string accepted or number of args invalid.')
     })
 })
+
+module.exports = {toUpperCase};
