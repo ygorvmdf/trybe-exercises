@@ -30,23 +30,61 @@ class Form extends React.Component {
                 <fieldset>
                     <section id="name-input">
                         <label for="name">Nome</label>
-                        <input onChange={this.inputToUpperCase} name="nome" id="name" type="text" maxlength="40" required/>
+                        <input onChange={this.inputToUpperCase} name="nome" id="name" type="text" maxlength="40" required />
                     </section>
                     <section id="email-input">
                         <label for="email">Email</label>
-                        <input name="email" id="email" type="text" maxlength="50" required/>
+                        <input name="email" id="email" type="text" maxlength="50" required />
                     </section>
                     <section id="cpf-input">
                         <label for="cpf">CPF</label>
-                        <input name="cpf" id="cpf" type="text" maxlength="11" required/>
+                        <input name="cpf" id="cpf" type="text" maxlength="11" required />
                     </section>
                     <section id="adress-input">
                         <label for="adress">Endereço</label>
-                        <input onChange={this.removeSpecialCharacters} name="endereco" id="adress" type="text" maxlength="200" required/>
+                        <input onChange={this.removeSpecialCharacters} name="endereco" id="adress" type="text" maxlength="200" required />
                     </section>
                     <section id="city-input">
                         <label for="vity">Cidade</label>
-                        <input onBlur={this.removeIfBeginsWithNumber} name="cidade" id="city" type="text" maxlength="28" required/>
+                        <input onBlur={this.removeIfBeginsWithNumber} name="cidade" id="city" type="text" maxlength="28" required />
+                    </section>
+                    <section id="city-input">
+                        <label for="vity">Cidade</label>
+                        <select required>
+                            <option>Acre</option>
+                            <option>Alagoas</option>
+                            <option>Amapá</option>
+                            <option>Amazonas</option>
+                            <option>Bahia</option>
+                            <option>Ceará</option>
+                            <option>Distrito Federal</option>
+                            <option>Espírito Santo</option>
+                            <option>Goiás</option>
+                            <option>Maranhão</option>
+                            <option>Mato Grosso</option>
+                            <option>Mato Grosso do Sul</option>
+                            <option>Minas Gerais</option>
+                            <option>Pará</option>
+                            <option>Paraíba</option>
+                            <option>Paraná</option>
+                            <option>Pernambuco</option>
+                            <option>Piauí</option>
+                            <option>Rio de Janeiro</option>
+                            <option>Rio Grande do Norte</option>
+                            <option>Rio Grande do Sul</option>
+                            <option>Rondônia</option>
+                            <option>Roraima</option>
+                            <option>Santa Catarina</option>
+                            <option>São Paulo</option>
+                            <option>Sergipe</option>
+                            <option>Tocantins</option>
+                        </select>
+                        <section id="tipo-input">
+                            <label for="casa">Casa</label>
+                            <input id="casa" type="radio" name="tipo" value="casa" checked/>
+                            <label for="apartamento">Apartamento</label>
+                            <input id="apartamento" type="radio" name="tipo" value="apartamento" />
+                        </section>
                     </section>
                 </fieldset>
             </form>
